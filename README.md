@@ -10,3 +10,5 @@ Record of dates for when algo files were made:
 April 2024
 +April 17th
 -GroupBy
++April 18th
+-PairSum
