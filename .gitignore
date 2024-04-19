@@ -1,0 +1,4 @@
+#. gitignore
+
+#ignore the following pages
+node_modules/

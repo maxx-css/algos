@@ -54,14 +54,14 @@ To Build:
 -Output Array
 -Value Map Object
  */
-const testArray1 = [2, 4, 6, 8];
-const testTarget1 = 6;
+// const testArray1 = [2, 4, 6, 8];
+// const testTarget1 = 6;
 
-const testArray2 = [2, -1, 3, 0];
-const testTarget2 = -1;
+// const testArray2 = [2, -1, 3, 0];
+// const testTarget2 = -1;
 
-const testArray3 = [1, 2, 3];
-const testTarget3 = 7;
+// const testArray3 = [1, 2, 3];
+// const testTarget3 = 7;
 
 // //incorrect attempt
 
@@ -107,17 +107,32 @@ const testTarget3 = 7;
 // console.log('PairSum', PairSum(testArray1, testTarget1));
 
 
+
+const testArray1 = [2, 4, 6, 8];
+const testTarget1 = 10;
+
+const testArray2 = [2, -1, 3, 0];
+const testTarget2 = -1;
+
+const testArray3 = [1, 2, 3];
+const testTarget3 = 7;
 //Chad response 
 
 const PairSum = function (inputArray, target) {
   let lookupObj = {};
 
   for (const num of inputArray) {
+    console.log('num', num);
+    
     let complement = target - num;
+    console.log('complement', complement);
+    
     if (lookupObj[complement] !== undefined) {
       return [complement, num];
     }
     lookupObj[num] = true; // Store the number as a key for quick lookup
+    console.log('lookupOBJ', lookupObj);
+    
   }
 
   return null; // Return null if no pair is found

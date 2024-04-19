@@ -2,8 +2,13 @@
 
 This is my algorithm workbook!
 
-Outputs will run on localhost:3000
+Use nodemon to output results in console.
 
+For Typescript Files use:
+npm start -- NameOfFile.ts
+
+For Javascript Files use:
+nodemon NameOfFile.js
 
 Record of dates for when algo files were made:
 
@@ -12,3 +17,5 @@ April 2024
 -GroupBy
 +April 18th
 -PairSum
++April 19th
+-FindMostFrequent
