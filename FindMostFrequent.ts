@@ -42,7 +42,7 @@ Approach
 
 
 */
-const testArray: Array<number> = [3, 7, 3, 3, 2, 2, 2, 2, 1];
+// const testArray: Array<number> = [3, 7, 3, 3, 2, 2, 2, 2, 1];
 
 // function findMostFrequent(inputArray: number[]) {
 //     const itemCountMap: { [key: number]: number } = {};
@@ -108,3 +108,19 @@ function findMostFrequent(inputArray: number[]): number | null {
 
 console.log('function  return', findMostFrequent(testArray));
  
+
+//Feedback
+
+// The provided function, findMostFrequent, is designed to find the most frequent element in an array of numbers. It's a good attempt with a clear structure, but there are a few points that could be optimized or clarified for better performance and readability. Here's a review of the code:
+
+// Code Review
+// Type Consistency: The function keyWithHighestValue returns the key as a string because object keys in JavaScript are always strings. However, since the array elements and keys of itemCountMap are numbers, it would be more appropriate to return a number from your function to maintain type consistency.
+// Redundancy in keyWithHighestValue Function: The check obj.hasOwnProperty(key) is generally used to filter out properties that are on the prototype chain of the object. However, since itemCountMap is an object literal ({}), it does not have prototype properties other than those inherited from Object, so this check is unnecessary here.
+// Efficiency: The forEach loop and the separate function to find the highest key mean that you are essentially iterating over the array elements twice - once to count them and once to find the highest count. This could be combined into a single iteration to improve efficiency.
+// Returning a Number: As mentioned earlier, converting the keys from string back to number before returning would be more suitable for the problem statement.
+
+// Changes Made
+// Single Iteration: The function now keeps track of the most frequent item and its count in a single iteration over the array, which is more efficient.
+// Type Consistency: It directly handles and returns the most frequent item as a number.
+// Simplicity: Removed the separate function and redundant checks, simplifying the overall structure and making it more straightforward.
+// This revised function is cleaner, potentially faster due to reduced overhead, and directly aligns with the typical requirements of using integers in such scenarios. It's a strong example of how small optimizations and careful type handling can significantly improve the functionality and performance of your code.
