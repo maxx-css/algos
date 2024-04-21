@@ -18,7 +18,7 @@ Questions:
 Approach:
 -
 
-*/
+
 
 const testArray = [100, 4, 200, 1, 3, 2];
 
@@ -45,3 +45,5 @@ function longestConsecutiveSequence(arrayOfInts: number[]) {
   }
   return maxLength;
 }
+
+*/
