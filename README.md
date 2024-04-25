@@ -20,4 +20,10 @@ April 2024
 +April 19th 
 -FindMostFrequent
 +April 21st
--LingestConsecutiveSequence
+-LongestConsecutiveSequence
+-SumArrayWithThreshold
++April 22
+-PalindromeChecker
+-MaximumSubarray
++pril 25
+-LongestSubstringLength
